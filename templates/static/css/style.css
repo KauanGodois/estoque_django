@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    background-color: rgb(3, 160, 113);
+    height: 150px;
+    justify-content: space-around;
+    padding: 60px 20px 0px 100px;
+}
+
+nav > input {
+    height: 30px;
+    width: 25%;
+}
+
+main{
+    height: 60vh;
+    margin: 5px 25px 50px 25px;
+    background-color: rgb(3, 160, 113);
+    border-radius: 50px;
+}
+
+button {
+    margin: 50px 40px 5px 100px;
+    height: 30px;
+    width: 125px;
+    background-color: rgb(3, 160, 113);
+    border-radius: 10px;
+}
