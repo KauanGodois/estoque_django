@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    
     <nav>
         <h1>Produtos</h1>
         <h1>Pedidos</h1>
@@ -18,10 +17,39 @@
     </nav>
     <button type="submit"></button>
     <main>
-        
-        <!-- {% for fruta in frutas %}
-        <h1>{{ fruta }}</h1>
-        {% endfor %} -->
+        <div class="add-prod">
+            <a href="{% url 'adicionar_produto' %}" id="add">Adicionar Produtos</a>
+        </div>
+        <div>
+            <section id="produtos">
+                <table border="">
+                    <thead>
+                        <th>Produtos</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Estoque</th>
+                    </thead>
+                    <tbody>
+                        {% for produto in produtos %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'produto' produto.id %}">{{produto.nome}}</a>                               
+                            </td>
+                            <td>
+                                {{produto.preco}}
+                            </td>
+                            <td>
+                                {{produto.quantidade}}
+                            </td>
+                            <td>
+                                {{produto.em_estoque}}
+                            </td>
+                        </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </section>
+        </div>
     </main>
 </body>
 </html>
