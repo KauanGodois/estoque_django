@@ -1,30 +1,39 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <nav>
-        <h1>Produtos</h1>
-        <h1>Pedidos</h1>
-        <h1>Relatório</h1>
-        <input type="text" name="Nome" size="15" />
-    </nav>
-    <button type="submit"></button>
-    <main>
-        <div class="add-prod">
-            <a href="{% url 'adicionar_produto' %}" id="add">Adicionar Produtos</a>
+        <label for="" id="logo">Logo</label>
+        <div class="nav-center">
+            <a href="#">Produtos</a>
+            <a href="#">Pedidos</a>
+            <a href="#">Relatório</a>
         </div>
+        <div class="nav-right">
+            <input type="text" name="Nome" size="15" id="barra-pesquisa" />
+            <button>Sair</button>
+        </div>
+    </nav>
+    <a href="{% url 'adicionar_produto' %}">
+        <button type="submit" id="add">Adicionar Produtos</button>
+    </a>
+    <main>
         <div>
             <section id="produtos">
                 <table border="">
                     <thead>
                         <th>Produtos</th>
+                        <th>Categoria</th>
                         <th>Preço</th>
                         <th>Quantidade</th>
                         <th>Estoque</th>
@@ -33,7 +42,10 @@
                         {% for produto in produtos %}
                         <tr>
                             <td>
-                                <a href="{% url 'produto' produto.id %}">{{produto.nome}}</a>                               
+                                <a href="{% url 'produto' produto.id %}">{{produto.nome}}</a>
+                            </td>
+                            <td>
+                                {{produto.categoria}}
                             </td>
                             <td>
                                 {{produto.preco}}
@@ -52,5 +64,5 @@
         </div>
     </main>
 </body>
-</html>
 
+</html>

@@ -1,45 +1,108 @@
-*{
+* {
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+
 }
 
-body{
-    background-color: black;
+button{
+    cursor: pointer;
 }
 
-nav{
+body {
+    background-color: #096eb4;
+}
+
+/* NAV BAR */
+
+nav {
     display: flex;
     width: 100%;
-    background-color: rgb(3, 160, 113);
-    height: 150px;
-    justify-content: space-around;
-    padding: 60px 20px 0px 100px;
+    background-color: #102a4b;
+    height: 100px;
+    justify-content: space-between;
+    padding: 35px 35px;
+    color: white;
+    box-shadow: 1px 1px 15px 6px #102a4b;
 }
 
-nav > input {
-    height: 30px;
-    width: 25%;
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-main{
+.nav-center a{
+    flex-direction: column;
+    padding: 10px 30px 10px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.nav-center a:hover {
+    color: #08bcff;
+    transition: .9s;
+    transform: scale(1.1);
+}
+
+.nav-right {
+    display: flex;
+}
+
+nav > #barra-pesquisa {
+    justify-content: center;
+    height: 20px;
+    width: 20%;
+}
+
+/* CONTAINER PRINCIPAL */
+
+main {
     display: flex;
     height: 60vh;
     margin: 5px 25px 50px 25px;
-    background-color: rgb(3, 160, 113);
+    background-color: #102a4b;
     border-radius: 50px;
     justify-content: center;
     align-items: center;
+    box-shadow: 1px 1px 15px 6px #102a4b;
 }
 
-button {
-    margin: 50px 40px 5px 100px;
+#add {
+    margin: 50px 40px 15px 100px;
     height: 30px;
-    width: 125px;
-    background-color: rgb(3, 160, 113);
+    width: 20%;
+    background-color: #08bcff;
     border-radius: 10px;
+    color: black;
+    box-shadow: 1px 1px 15px 6px #102a4b;
 }
 
-.add-prod{
+#add:hover {
+    background-color: #096eb4;
+    transition: 1s;
+    box-shadow: 1px 1px 15px 6px #08bcff;
+    color: white;
+}
+
+.add-prod {
     justify-content: center;
+}
+
+section {
+    padding: 4%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #08bcff;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    width: 100%;
+    box-shadow: 1px 1px 10px 2px #102a4b;
 }
